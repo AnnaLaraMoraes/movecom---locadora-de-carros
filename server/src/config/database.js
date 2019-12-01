@@ -1,0 +1,10 @@
+module.exports = {
+  username: 'root',
+  password: '123456',
+  database: 'movecom',
+  host: '127.0.0.1',
+  dialect: 'mysql',
+  define: {
+    freezeTableName: true
+  }
+}

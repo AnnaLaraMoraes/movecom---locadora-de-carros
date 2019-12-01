@@ -1,0 +1,5 @@
+*O arquivo packege.json serve serve para guardar informações das dependencias que for usando no projeto
+
+*Express é uma framework que ajuda a lidar com rotas, views
+
+*
