@@ -71,11 +71,16 @@ const destroy = async (idUsuario) => {
     return db.usuario.destroy({where: {id_usuario: idUsuario}})
 }
 
+const login = (dados) => {
+    return db.usuario.findOne({where: {email: dados.email, senha: dados.senha}})
+}
+
 module.exports = {
     index,
     store,
     show,
     update,
-    destroy
+    destroy,
+    login
 }
 

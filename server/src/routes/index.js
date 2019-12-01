@@ -19,6 +19,7 @@ routes.post('/usuarios', usuarioController.store)
 routes.get('/usuarios/:idUsuario', usuarioController.show)
 routes.put('/usuarios/:idUsuario', usuarioController.update)
 routes.delete('/usuarios/:idUsuario', usuarioController.destroy)
+routes.post('/login', usuarioController.login)
 
 routes.get('/categoria', categoriaController.index)
 

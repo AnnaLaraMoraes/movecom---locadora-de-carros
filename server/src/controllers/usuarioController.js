@@ -35,10 +35,18 @@ const destroy = (req, res) => {
   }).catch(error => res.status(500).send(error));
 }
 
+const login = (req, res) => {  
+  let data = req.body
+  usuarioService.login(data).then( usuarios => {
+    return res.status(200).send(usuarios)
+  }).catch(error => res.status(500).send("erro"));
+}
+
 module.exports = {
   index,
   store,
   show,
   update,
-  destroy
+  destroy,
+  login
 }
