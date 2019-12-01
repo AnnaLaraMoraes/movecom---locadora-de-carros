@@ -1,0 +1,16 @@
+{
+"placa": "1228",
+"fk_id_marca":"2",
+"fk_id_modelo":"1",
+"chassi":"1",
+"renavn":"1",
+"fk_id_categoria":"1",
+"preco_compra":"1",
+"preco_venda":"1",
+"numero_passageiros":"5",
+"ano_fabricacao": "2015",
+"tipo_combustivel":"Gasolina",
+"potencia":"1",
+"capacidade_porta_malas":"1",
+"situcao":"Locado"
+}

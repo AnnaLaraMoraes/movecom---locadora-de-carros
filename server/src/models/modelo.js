@@ -10,6 +10,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
+      fk_id_marca: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'marca', 
+          key: 'id_marca', 
+        }
+      },
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE,

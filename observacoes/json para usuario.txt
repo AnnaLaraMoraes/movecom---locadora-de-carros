@@ -1,0 +1,18 @@
+{
+	"telefone": "968852",
+	"email": "sdfsd",
+	"senha":"123456",
+	"identidade":"52696",
+	"nome":"paulo",
+	"razao_social":null,
+	"cpf":"58288522",
+	"cnpj":null,
+	"tipo_pessoa":"fisica",
+	"logradouro": "965",
+	"numero":"85",
+	"complemento":"casa",
+	"bairro":"casa",
+	"cidade":"goiania",
+	"estado":"go",
+	"cep" : "123456"
+}
