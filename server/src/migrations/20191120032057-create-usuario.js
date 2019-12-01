@@ -1,43 +1,48 @@
 module.exports = {
   up: (queryInterface, DataTypes) => {
-    return Promise.all([queryInterface.createTable('motorista', {
-      id_motorista: {
+    return Promise.all([queryInterface.createTable('usuario', {
+      id_usuario: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
-      nome: {
-        allowNull: false,
-        type: DataTypes.STRING,
-      },
-      identidade: {
-        allowNull: false,
-        type: DataTypes.STRING,
-      },
       telefone: {
         allowNull: false,
         type: DataTypes.STRING,
-        unique: true,
       },
       email: {
         allowNull: false,
         type: DataTypes.STRING,
+        unique: true,
       },
-      fk_id_cnh: {
+      senha: {
         allowNull: false,
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'cnh', 
-          key: 'id_cnh', 
-        }
+        type: DataTypes.STRING,
       },
-      fk_id_usuario:{
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'usuario', 
-          key: 'id_usuario', 
-        }
+      identidade: {
+        allowNull: true,
+        type: DataTypes.STRING,
+      },
+      nome: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      razao_social: {
+        allowNull: true,
+        type: DataTypes.STRING,
+      },
+      cpf: {
+        allowNull: true,
+        type: DataTypes.STRING,
+      },
+      cnpj: {
+        allowNull: true,
+        type: DataTypes.STRING,
+      },
+      tipo_pessoa: {
+        allowNull: false,
+        type:DataTypes.ENUM('fisica', 'juridica'),
       },
       createdAt: {
         allowNull: false,
@@ -52,6 +57,6 @@ module.exports = {
   },
 
   down: (queryInterface) => {
-    return queryInterface.dropTable('motorista');
+    return queryInterface.dropTable('usuario');
   }
 };

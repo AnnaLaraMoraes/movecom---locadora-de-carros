@@ -1,8 +1,9 @@
 module.exports = {
   up: (queryInterface, DataTypes) => {
-    return Promise.all([queryInterface.createTable('pessoaFisica', {
-      cpf: {
+    return Promise.all([queryInterface.createTable('motorista', {
+      id_motorista: {
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
         type: DataTypes.INTEGER,
       },
@@ -10,16 +11,25 @@ module.exports = {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      num_identidade: {
+      identidade: {
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
+      },
+      telefone: {
+        allowNull: false,
+        type: DataTypes.STRING,
         unique: true,
       },
-      fk_id_usuario:{
+      email: {
+        allowNull: false,
+        type: DataTypes.STRING,
+      },
+      fk_id_cnh: {
+        allowNull: false,
         type: DataTypes.INTEGER,
         references: {
-          model: 'usuario', 
-          key: 'id_usuario', 
+          model: 'cnh', 
+          key: 'id_cnh', 
         }
       },
       createdAt: {
@@ -35,6 +45,6 @@ module.exports = {
   },
 
   down: (queryInterface) => {
-    return queryInterface.dropTable('pessoaFisica');
+    return queryInterface.dropTable('motorista');
   }
 };
