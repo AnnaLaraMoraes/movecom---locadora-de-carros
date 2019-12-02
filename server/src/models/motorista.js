@@ -31,13 +31,6 @@ module.exports = (sequelize, DataTypes) => {
             key: 'id_cnh', 
           }
         },
-        fk_id_usuario:{
-          type: DataTypes.INTEGER,
-          references: {
-            model: 'usuario', 
-            key: 'id_usuario', 
-          }
-        },
         createdAt: {
           allowNull: false,
           type: DataTypes.DATE,

@@ -38,7 +38,11 @@ const destroy = (req, res) => {
 const login = (req, res) => {  
   let data = req.body
   usuarioService.login(data).then( usuarios => {
-    return res.status(200).send(usuarios)
+    if(usuarios){
+      return res.status(200).send(usuarios)
+    }else{
+      res.status(204).send(usuarios)
+    }
   }).catch(error => res.status(500).send("erro"));
 }
 

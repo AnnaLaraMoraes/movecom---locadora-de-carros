@@ -5,6 +5,9 @@ const usuarioController = require('../controllers/usuarioController');
 const categoriaController = require('../controllers/categoriaController');
 const veiculoController = require('../controllers/veiculoController');
 const modeloController = require('../controllers/modeloController');
+const motoristaController = require('../controllers/motoristaController');
+//const locacaoController = require('../controllers/locacaoController');
+
 
 const routes = new Router();
 
@@ -35,5 +38,16 @@ routes.get('/modelos/:idModelo', modeloController.show)
 routes.put('/modelos/:idModelo', modeloController.update)
 routes.delete('/modelos/:idModelo', modeloController.destroy)
 
+routes.get('/motorista', motoristaController.index)
+routes.post('/motorista', motoristaController.store)
+routes.get('/motorista/:idMotorista', motoristaController.show)
+routes.put('/motorista/:idMotorista', motoristaController.update)
+routes.delete('/motorista/:idMotorista', motoristaController.destroy)
+
+/*routes.get('/locacao', locacaoController.index)
+routes.post('/locacao', locacaoController.store)
+routes.get('/locacao/:idMotorista', locacaoController.show)
+routes.put('/locacao/:idMotorista', locacaoController.update)
+routes.delete('/locacao/:idMotorista', locacaoController.destroy)*/
 
 module.exports = routes

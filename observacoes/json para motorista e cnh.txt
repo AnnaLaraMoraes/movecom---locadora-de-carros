@@ -1,0 +1,10 @@
+{
+	"numero": 12345,
+    "categoria": "A",
+    "data_validade": "2025-12-01",
+    "imagem": "caminho da imagem",
+    "nome": "Mateus",
+    "identidade": "65872",
+    "telefone": "6528852",
+    "email": "email do cara"	
+}
